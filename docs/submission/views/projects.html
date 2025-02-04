@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .icon {
+            margin-left: auto;
+        }
+        .icon img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .carousel-container {
+            width: 80%;
+            margin: 120px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .project-card {
+    position: relative;
+    width: 300px;  /* Keep width consistent */
+    height: 350px; /* Set a fixed height */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images scale to fill the space */
+    border-radius: 10px;
+}
+
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        footer a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="icon">
+                    <a href="#">
+                        <img src="./img/favicon.png" alt="Icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="project-card">
+                    <img src="./img/candyland.png" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Candyland</h3>
+                        <p>Online 2-Player Candyland game made with C++</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="./img/datab.png" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Database</h3>
+                        <p>Created, Inserted, and Extracted data from databse with thousands of entries</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="./img/taskman.png" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Task Manager</h3>
+                        <p>A web application for organizing tasks with dates</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button onclick="moveCarousel(-1)">&#10094;</button>
+                <button onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/yasirqasemi/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+    </footer>
+    
+    <script>
+        let index = 0;
+        function moveCarousel(direction) {
+            const carousel = document.querySelector(".carousel");
+            const cards = document.querySelectorAll(".project-card");
+            const cardWidth = cards[0].offsetWidth + 20; 
+            index += direction;
+            if (index < 0) index = cards.length - 1;
+            if (index >= cards.length) index = 0;
+            carousel.style.transform = `translateX(${-index * cardWidth}px)`;
+        }
+    </script>
+</body>
+</html>

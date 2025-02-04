@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        header {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .icon {
+            margin-left: auto;
+        }
+        .icon a {
+            font-size: 24px;
+        }
+        .icon img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            gap: 40px;
+            margin-top: 100px;
+        }
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+           
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+        }
+        .description {
+            max-width: 600px;
+            font-size: 20px;
+        }
+        .resume-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 25px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        footer a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="icon">
+                    <a href="#">
+                        <img src="./img/favicon.png" alt="Icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <img src="./img/me.JPG" alt="Your Image" class="profile-image">
+            <div class="description">
+                <h1>Welcome</h1>
+                <p>Hi, I'm Yasir Qasemi, a passionate individual with interests in AI, web development, and cybersecurity. Explore my projects and hobbies to learn more!</p>
+                <a href="resume.html" class="resume-link">View My Resume</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/yasirqasemi/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .icon {
+            margin-left: auto;
+        }
+        .icon a {
+            font-size: 24px;
+        }
+        .icon img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .resume-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .resume-section {
+            margin-bottom: 20px;
+        }
+        .resume-section h2 {
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        footer a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="icon"><a href="#"> <img src="./img/favicon.png" alt="Icon"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="resume-container">
+            <section class="resume-section">
+                <h2>Education</h2>
+                <p><strong>University of Colorado Boulder</strong> - Bachelor’s in Computer Science and Electrical Engineering - Minor in Business</p>
+            </section>
+            <section class="resume-section">
+                <h2>Experience</h2>
+                <p><strong>Lady Fatima Center</strong> - Finance Intern</p>
+                <p>Accounted for the monthy statements, provided ideas for new revenue, and colloborated with a team.</p>
+            </section>
+            <section class="resume-section">
+                <h2>Skills</h2>
+                <p>Programming Languages: C++, C , SQL, Python</p>
+                <p>Web Development: HTML, CSS</p>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/yasirqasemi/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </footer>
+</body>
+</html>
